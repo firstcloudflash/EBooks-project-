@@ -1,0 +1,20 @@
+const express = require('express');
+const stripe = require('stripe')('your-secret-key'); // Replace with your actual Stripe secret key
+const app = express();
+
+app.use(express.json());
+
+app.post('/charge', async (req, res) => {
+    const { token } = req.body;
+    try {
+        const charge = await stripe.charges.create({
+            amount: 5000, // Amount in cents, e.g., $50.00
+            currency: 'usd',
+            source: token,
+            description: 'Ebook Purchase',
+        });
+        res.json({ success: true });
+    } catch (error) {
+        res.json({ success: false, error: error.message });
+    }
+});
