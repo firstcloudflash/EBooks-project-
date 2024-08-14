@@ -1,25 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const Navbar = () => {
-  return (
-    <nav className="bg-blue-600 text-white p-4">
-      <div className="container mx-auto flex justify-between">
-        <h1 className="text-3xl font-bold">
-          <Link to="/">EbooksCentralHub</Link>
-        </h1>
-        <div>
-          <Link to="/shop" className="mr-4">Shop</Link>
-          <Link to="/blog" className="mr-4">Blog</Link>
-          <Link to="/contact" className="mr-4">Contact</Link>
-          <Link to="/coloring-pages" className="mr-4">Coloring Pages</Link>
-          <Link to="/services" className="mr-4">Services</Link>
-          <Link to="/wallpapers" className="mr-4">Wallpapers</Link>
+<nav class="bg-blue-900 p-4">
+    <div class="container mx-auto">
+        <div class="flex justify-between">
+            <a href="index.html" class="text-white text-xl font-bold">EbooksCentralHub</a>
+            <div class="space-x-4">
+                <a href="coloring.html" class="text-white">Coloring Pages</a>
+                <a href="affiliate.html" class="text-white">Affiliate Products</a>
+                <a href="wallpapers.html" class="text-white">Wallpapers</a>
+                <a href="ebooks.html" class="text-white">Ebooks</a>
+                <a href="services.html" class="text-white">Services</a>
+                <a href="contact.html" class="text-white">Contact</a>
+            </div>
         </div>
-      </div>
-    </nav>
-  );
-};
-
-export default Navbar;
-
+    </div>
+</nav>
+  
